@@ -169,6 +169,9 @@
     <Compile Include="Controllers\API\LinkController.cs" />
     <Compile Include="Controllers\API\UserController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\MVC\GuiController.cs" />
+    <Compile Include="Controllers\MVC\RedirectController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -188,6 +191,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Base\" />
+    <Folder Include="Views\Gui\" />
+    <Folder Include="Views\Redirect\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">

@@ -12,11 +12,16 @@ namespace LinkCutter
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                "Redirect",
+                "{linkId}",
+                new { controller = "Redirect", action = "Index" },
+                new { linkId = @"\d+" }
+            );
+            routes.MapRoute(
+                "GUI_default",
+                "{*url}",
+                new { controller = "Gui", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
