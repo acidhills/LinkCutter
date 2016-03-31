@@ -11,6 +11,5 @@ namespace Entities
         public int Id { get; set; }
         public int UserId { get; set; }
         public string Original { set; get; }
-        public string Short { get; set; }
     }
 }
