@@ -5,7 +5,7 @@ using System.Web.Http;
 
 namespace LinkCutter.Controllers.API
 {
-    [RoutePrefix("user/{userId:int}")]
+    [RoutePrefix("api/user/{userId:int}")]
     public class LinkController : BaseApiController
     {
         ILinkService _linkService { get; set; }
@@ -13,12 +13,14 @@ namespace LinkCutter.Controllers.API
         {
             _linkService = linkService;
         }
-        public Link Post(int userId)
+        [Route("link")]
+        public Link Post(int userId,[FromBody]string url)
         {
-            return _linkService.Create(userId);
+           return _linkService.Create(userId, url);
         }
 
         [HttpGet]
+        [Route("links")]
         public IEnumerable<Link> Links(int userId)
         {
             return _linkService.GetLinks(userId);

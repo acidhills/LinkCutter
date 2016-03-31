@@ -9,7 +9,7 @@ namespace DAL.Repositories.Contracts
 {
     public interface ILinkRepo
     {
-        Link Create(int userId);
+        Link Create(int userId, string url);
 
         Link Get(int id);        
     }

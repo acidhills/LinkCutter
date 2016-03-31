@@ -1,4 +1,4 @@
 ﻿CREATE TABLE [link_cutter].[User]
 (
-	[Id] INT NOT NULL PRIMARY KEY
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY
 )

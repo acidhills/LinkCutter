@@ -9,6 +9,6 @@ namespace Entities
     public class User
     {
         public int Id { get; set; }
-        public virtual IEnumerable<Link> Links { get; set; } 
+        public virtual ICollection<Link> Links { get; set; } 
     }
 }

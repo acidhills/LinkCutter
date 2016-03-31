@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entities;
+using System.Data.Entity;
 
 namespace DAL.Repositories.Implementations
 {
@@ -12,12 +13,22 @@ namespace DAL.Repositories.Implementations
     {
         public User Create()
         {
-            throw new NotImplementedException();
+            using (var ctx = GetContext())
+            {
+                var user = new User();
+                ctx.Users.Add(user);
+                if(ctx.SaveChanges() > 0)
+                    return user;
+                else return null;
+            }
         }
 
         public User Get(int id)
         {
-            throw new NotImplementedException();
+            using (var ctx = GetContext())
+            {
+                return ctx.Users.Include(x => x.Links).FirstOrDefault(x => x.Id == id);
+            }
         }
     }
 }

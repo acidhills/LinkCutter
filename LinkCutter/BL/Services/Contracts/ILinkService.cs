@@ -9,7 +9,7 @@ namespace BL.Services.Contracts
 {
     public interface ILinkService
     {
-        Link Create(int userId);
+        Link Create(int userId, string url);
         Link Get(int id);
         IEnumerable<Link> GetLinks(int userId);
     }

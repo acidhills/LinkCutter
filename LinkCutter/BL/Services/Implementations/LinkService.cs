@@ -18,9 +18,9 @@ namespace BL.Services.Implementations
             _userRepo = userRepo;
             _linkRepo = linkRepo;
         }
-        public Link Create(int userId)
+        public Link Create(int userId, string url)
         {
-            return _linkRepo.Create(userId);
+            return _linkRepo.Create(userId,url);
         }
 
         public Link Get(int id)
@@ -30,7 +30,8 @@ namespace BL.Services.Implementations
 
         public IEnumerable<Link> GetLinks(int userId)
         {
-            return _userRepo.Get(userId)?.Links;
+            var user = _userRepo.Get(userId);
+            return user?.Links;
         }
     }
 }

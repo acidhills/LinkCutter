@@ -10,14 +10,24 @@ namespace DAL.Repositories.Implementations
 {
     public class LinkRepo : BaseRepo, ILinkRepo
     {
-        public Link Create(int userId)
+        public Link Create(int userId, string url)
         {
-            throw new NotImplementedException();
+            using (var ctx = GetContext())
+            {
+                var link = new Link { Original = url, UserId = userId };
+                ctx.Links.Add(link);
+                if (ctx.SaveChanges() > 0)
+                    return link;
+                else return null;
+                
+
+            }
         }
 
         public Link Get(int id)
         {
-            throw new NotImplementedException();
+            using (var ctx = GetContext())
+                return ctx.Links.FirstOrDefault(x => x.Id == id);
         }
     }
 }

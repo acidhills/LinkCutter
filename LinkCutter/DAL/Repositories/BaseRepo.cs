@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DAL.EF;
+using System.Data.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +10,9 @@ namespace DAL.Repositories
 {
     public abstract class BaseRepo
     {
+        protected LinkCutterDataContext GetContext()
+        {
+            return new LinkCutterDataContext("name=LinkCutterDBConnectionString");
+        }
     }
 }
