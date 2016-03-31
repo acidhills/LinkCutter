@@ -8,6 +8,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
 using LinkCutter.App_Start;
+using System.Web.Optimization;
 
 namespace LinkCutter
 {
@@ -16,6 +17,7 @@ namespace LinkCutter
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             AutofacConfig.Build();
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);

@@ -149,21 +149,24 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Scripts\angular-mocks.js" />
-    <Content Include="Scripts\angular-ui-router.js" />
-    <Content Include="Scripts\angular-ui-router.min.js" />
-    <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular\angular-mocks.js" />
+    <Content Include="Scripts\angular\angular-ui-router.js" />
+    <Content Include="Scripts\angular\angular-ui-router.min.js" />
+    <Content Include="Scripts\angular\angular.js" />
+    <Content Include="Scripts\angular\angular.min.js" />
+    <Content Include="Scripts\angular\angular.min.js.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Web.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Gui\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutofacConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\API\LinkController.cs" />
@@ -191,8 +194,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Base\" />
-    <Folder Include="Views\Gui\" />
+    <Folder Include="Scripts\angular\application\controllers\" />
+    <Folder Include="Scripts\angular\application\providers\" />
     <Folder Include="Views\Redirect\" />
   </ItemGroup>
   <ItemGroup>
