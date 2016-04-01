@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Entities.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,8 @@ namespace BL.Services.Contracts
 {
     public interface ILinkService
     {
-        Link Create(int userId, string url);
-        Link Get(int id);
-        IEnumerable<Link> GetLinks(int userId);
+        LinkVM Create(int userId, string url);
+        LinkVM Get(int id);
+        IEnumerable<LinkVM> GetLinks(int userId);
     }
 }

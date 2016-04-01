@@ -139,6 +139,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Views\addLink.html" />
+    <Content Include="Content\Views\links.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -149,6 +151,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Scripts\angular\angular-cookies.js" />
     <Content Include="Scripts\angular\angular-mocks.js" />
     <Content Include="Scripts\angular\angular-ui-router.js" />
     <Content Include="Scripts\angular\angular-ui-router.min.js" />
@@ -156,6 +159,11 @@
     <Content Include="Scripts\angular\angular.min.js" />
     <Content Include="Scripts\angular\angular.min.js.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\angular\application\app.js" />
+    <Content Include="Scripts\angular\application\controllers\link-controller.js" />
+    <Content Include="Scripts\angular\application\controllers\links-controller.js" />
+    <Content Include="Scripts\angular\application\providers\link-provider.js" />
+    <Content Include="Scripts\angular\application\providers\user-provider.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
@@ -193,9 +201,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Scripts\angular\application\controllers\" />
-    <Folder Include="Scripts\angular\application\providers\" />
     <Folder Include="Views\Redirect\" />
   </ItemGroup>
   <ItemGroup>

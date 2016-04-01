@@ -8,7 +8,11 @@
     @RenderSection("styles", required: false)
 </head>
 <body>
-    <div class="col-xs-8 col-xs-offset-1">
+    <div class="container" ng-app="linkCutterApp">
+        <ul class="nav nav-pills">
+            <li><a ui-sref="link()">Хоум</a></li>
+            <li  ><a ui-sref="links()">Ранее сокращавшиеся</a></li>
+        </ul>
         @RenderBody()
     </div>
 

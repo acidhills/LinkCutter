@@ -15,6 +15,7 @@ namespace DAL.EF.EntityConfigurations
         {
             ToTable("Link");
             Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(x => x.Created).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
         }
     }
 }

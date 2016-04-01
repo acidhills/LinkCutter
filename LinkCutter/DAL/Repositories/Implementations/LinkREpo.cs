@@ -29,5 +29,17 @@ namespace DAL.Repositories.Implementations
             using (var ctx = GetContext())
                 return ctx.Links.FirstOrDefault(x => x.Id == id);
         }
+
+        public Link Update(Link link)
+        {
+            using (var ctx = GetContext())
+            {
+                ctx.Links.Attach(link);
+                ctx.Entry(link).State = System.Data.Entity.EntityState.Modified;
+                if (ctx.SaveChanges() > 0)
+                    return link;
+                else return null;
+            }
+        }
     }
 }

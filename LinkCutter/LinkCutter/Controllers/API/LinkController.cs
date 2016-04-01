@@ -1,5 +1,6 @@
 ﻿using BL.Services.Contracts;
 using Entities;
+using Entities.ViewModels;
 using System.Collections.Generic;
 using System.Web.Http;
 
@@ -14,14 +15,14 @@ namespace LinkCutter.Controllers.API
             _linkService = linkService;
         }
         [Route("link")]
-        public Link Post(int userId,[FromBody]string url)
+        public LinkVM Post(int userId,[FromBody]string url)
         {
            return _linkService.Create(userId, url);
         }
 
         [HttpGet]
         [Route("links")]
-        public IEnumerable<Link> Links(int userId)
+        public IEnumerable<LinkVM> Links(int userId)
         {
             return _linkService.GetLinks(userId);
         }

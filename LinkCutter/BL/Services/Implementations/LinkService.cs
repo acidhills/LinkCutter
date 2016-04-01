@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Entities;
 using DAL.Repositories.Contracts;
+using BL.Mappers;
+using Entities.ViewModels;
 
 namespace BL.Services.Implementations
 {
@@ -13,25 +15,29 @@ namespace BL.Services.Implementations
     {
         readonly IUserRepo _userRepo;
         readonly ILinkRepo _linkRepo;
-        public LinkService(IUserRepo userRepo, ILinkRepo linkRepo)
+        readonly LinkToVmMaper _linkMapper;
+        public LinkService(IUserRepo userRepo, 
+                           ILinkRepo linkRepo,
+                           LinkToVmMaper linkMapper)
         {
             _userRepo = userRepo;
             _linkRepo = linkRepo;
+            _linkMapper = linkMapper;
         }
-        public Link Create(int userId, string url)
+        public LinkVM Create(int userId, string url)
         {
-            return _linkRepo.Create(userId,url);
+            return _linkMapper.Map(_linkRepo.Create(userId,url));
         }
 
-        public Link Get(int id)
+        public LinkVM Get(int id)
         {
-            return _linkRepo.Get(id);
+            return _linkMapper.Map(_linkRepo.Get(id));
         }
 
-        public IEnumerable<Link> GetLinks(int userId)
+        public IEnumerable<LinkVM> GetLinks(int userId)
         {
             var user = _userRepo.Get(userId);
-            return user?.Links;
+            return user?.Links.Select(_linkMapper.Map);
         }
     }
 }

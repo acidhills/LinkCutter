@@ -1,5 +1,6 @@
 ﻿using BL.Services.Contracts;
 using Entities;
+using Entities.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace LinkCutter.Controllers.API
         {
             _userService = userService;
         }
-        public User Post()
+        public UserVM Post()
         {
             return _userService.Create();
         }

@@ -1,0 +1,15 @@
+﻿<div ng-controller="linkController as linkCtrl">
+
+    <div class="input-group input-group-lg">
+        <input type="text"
+               ng-model="linkCtrl.text"
+               ng-disabled="!linkCtrl.user"
+               placeholder="вставь ссылку"
+               class="form-control"/>
+        <span class="input-group-btn">
+            <button class="btn btn-default" 
+                    type="button"
+                    ng-click="linkCtrl.newLink()">Сгенерить</button>
+        </span>
+    </div>
+</div>

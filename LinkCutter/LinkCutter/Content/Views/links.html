@@ -1,0 +1,25 @@
+﻿<div ng-controller="linksController as linksCtrl">
+    
+    <div class="panel panel-default">
+        <div class="panel-body"
+             ng-show="linksCtrl.links.length == 0">
+            <h1>пока ничего не насокращал</h1>
+        </div>
+
+        <table class="table"
+               ng-show="!linksCtrl.links.length == 0">
+            <tr>
+                <th>Урла</th>
+                <th>Обрезок</th>
+                <th>Напосещали</th>
+                <th>Создана</th>
+            </tr>
+            <tr ng-repeat="link in linksCtrl.links">
+                <td>{{link.originalUrl}}</td>
+                <td>{{link.shortUrl}}</td>
+                <td>{{link.visitors}}</td>
+                <td>{{link.created}}</td>
+            </tr>
+</table>
+</div>
+</div>

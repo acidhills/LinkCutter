@@ -11,6 +11,8 @@ namespace DAL.Repositories.Contracts
     {
         Link Create(int userId, string url);
 
-        Link Get(int id);        
+        Link Get(int id);
+
+        Link Update(Link link);       
     }
 }
