@@ -1,5 +1,6 @@
 ﻿using DAL.EF.EntityConfigurations;
 using Entities;
+using Entities.DataEntities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

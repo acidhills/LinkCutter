@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DAL.Repositories
 {
     public abstract class BaseRepo
-    {
+    {        
         protected LinkCutterDataContext GetContext()
         {
             return new LinkCutterDataContext("name=LinkCutterDBConnectionString");

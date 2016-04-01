@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Entities;
 using System.Data.Entity;
+using Entities.DataEntities;
 
 namespace DAL.Repositories.Implementations
 {

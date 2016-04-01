@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Link.cs" />
+    <Compile Include="DataEntities\Link.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="DataEntities\User.cs" />
     <Compile Include="ViewModels\LinkVM.cs" />
     <Compile Include="ViewModels\UserVM.cs" />
   </ItemGroup>

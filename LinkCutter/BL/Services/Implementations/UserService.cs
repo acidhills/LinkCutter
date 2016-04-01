@@ -8,6 +8,7 @@ using Entities;
 using DAL.Repositories.Contracts;
 using BL.Mappers;
 using Entities.ViewModels;
+using Entities.DataEntities;
 
 namespace BL.Services.Implementations
 {
