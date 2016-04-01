@@ -45,8 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLAutofacModule.cs" />
-    <Compile Include="Mappers\LinkToVmMaper.cs" />
-    <Compile Include="Mappers\UserToVmMaper.cs" />
+    <Compile Include="Mappers\IVmMapper.cs" />
+    <Compile Include="Mappers\LinkToVmMapper.cs" />
+    <Compile Include="Mappers\UserToVmMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Contracts\ILinkService.cs" />
     <Compile Include="Services\Contracts\ILinkStatisticService.cs" />

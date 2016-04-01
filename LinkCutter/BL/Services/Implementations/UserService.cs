@@ -14,9 +14,9 @@ namespace BL.Services.Implementations
     public class UserService : BaseService, IUserService
     {
         readonly IUserRepo _userRepo;
-        readonly UserToVmMaper _userToVmMapper;
+        readonly IVmMapper<User, UserVM> _userToVmMapper;
         public UserService(IUserRepo userRepo,
-                           UserToVmMaper userToVmMapper)
+                           IVmMapper<User, UserVM> userToVmMapper)
         {
             _userRepo = userRepo;
             _userToVmMapper = userToVmMapper;

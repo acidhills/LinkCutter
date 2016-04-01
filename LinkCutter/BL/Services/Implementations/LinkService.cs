@@ -15,10 +15,10 @@ namespace BL.Services.Implementations
     {
         readonly IUserRepo _userRepo;
         readonly ILinkRepo _linkRepo;
-        readonly LinkToVmMaper _linkMapper;
+        readonly IVmMapper<Link, LinkVM> _linkMapper;
         public LinkService(IUserRepo userRepo, 
                            ILinkRepo linkRepo,
-                           LinkToVmMaper linkMapper)
+                           IVmMapper<Link, LinkVM> linkMapper)
         {
             _userRepo = userRepo;
             _linkRepo = linkRepo;

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BL.Mappers
 {
-    public class UserToVmMaper
+    public class UserToVmMapper: IVmMapper<User, UserVM>
     {
         public UserVM Map(User user)
         {

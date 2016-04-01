@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace BL.Mappers
 {
-    public class LinkToVmMaper
+    public class LinkToVmMapper : IVmMapper<Link,LinkVM>
     {
         readonly string _baseUrl;
-        public LinkToVmMaper(string baseUrl)
+        public LinkToVmMapper(string baseUrl)
         {
             _baseUrl = baseUrl;
         }

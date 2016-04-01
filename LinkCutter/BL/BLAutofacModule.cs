@@ -3,6 +3,8 @@ using BL.Mappers;
 using BL.Services.Contracts;
 using BL.Services.Implementations;
 using DAL;
+using Entities;
+using Entities.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,8 +18,8 @@ namespace BL
         protected override void Load(ContainerBuilder moduleBuilder)
         {
             moduleBuilder.RegisterModule<DALAutofacModule>();
-            moduleBuilder.Register(x =>new LinkToVmMaper("http://localhost:58170/")).AsSelf().SingleInstance();
-            moduleBuilder.RegisterType<UserToVmMaper>().AsSelf().SingleInstance();
+            moduleBuilder.Register(x =>new LinkToVmMapper("http://localhost:58170/")).As<IVmMapper<Link, LinkVM>>().SingleInstance();
+            moduleBuilder.RegisterType<UserToVmMapper>().As<IVmMapper<User, UserVM>>().SingleInstance();
             moduleBuilder.RegisterType<LinkService>().As<ILinkService>().SingleInstance();
             moduleBuilder.RegisterType<UserService>().As<IUserService>().SingleInstance();
             moduleBuilder.RegisterType<LinkStatisticService>().As<ILinkStatisticService>().SingleInstance();
